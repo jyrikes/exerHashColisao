@@ -1,12 +1,16 @@
 package hashColisao;
 
-public class EstruturaHashTable implements EstruturaDeDados{
-    private Integer tabela[];
-    //TODO adicionar elementos necessários para implementar o porão
-
-    public EstruturaHashTable() {
+public class EstruturaHashTable <T extends Comparable<T>> implements EstruturaDeDados<T>{
+    private Celula<T>[] table;
+    private Celula<T>[] bucket;
+    private Celula<T>[][] hashTable;
+    
+    public EstruturaHashTable(int tableSize ,int bucketSize) {
         //esse número pode ser alterado
-        tabela = new Integer[1000];
+        table = new Celula<T>[tableSize];
+        bucket = new Celula<T>[bucketSize];
+        hashTable = new Celula<T>[table][bucket];
+
     }
 
     @Override
@@ -28,5 +32,6 @@ public class EstruturaHashTable implements EstruturaDeDados{
         // TODO se o elemento estiver presente retorna a sua posição. Caso contrário, retorna -1.
         return -1;
     }
+    
 
 }

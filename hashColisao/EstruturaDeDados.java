@@ -1,7 +1,7 @@
 package hashColisao;
 
-public interface EstruturaDeDados {
-    public boolean insert(int chave);
-    public boolean delete(int chave);
-    public int search(int chave);
+public interface EstruturaDeDados<T extends Comparable<T>> {
+    public boolean insert(T chave);
+    public boolean delete(T chave);
+    public int search(T chave);
 }
