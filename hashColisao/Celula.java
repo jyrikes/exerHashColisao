@@ -1,21 +1,32 @@
-public class Celula <T> {
+package hashColisao;
+
+public class Celula {
 
 
-    private T value;
+    private Integer value;
     private Boolean inTable;
+    private Boolean colidiu;
     private Integer posColision ;
 
-    public Celula(){
-        this.value = null;
-        this.inTable = null;
+    public Celula(int value){
+        this.value = value;
+        this.inTable = false;
         this.posColision = null;
+        this.colidiu = false;
 
     }
+    public Celula(){
+      this.value = null;
+      this.inTable = null;
+      this.posColision = null;
+      this.colidiu = false;
 
-    public void setValue(T value) {
+  }
+
+    public void setValue(int value) {
         this.value = value;
     }
-    public T getValue() {
+    public int getValue() {
         return value;
     }
     public void setInTable(Boolean inTable) {
@@ -29,6 +40,12 @@ public class Celula <T> {
     }
     public Integer getPosColision() {
         return posColision;
+    }
+    public Boolean getColidiu() {
+      return colidiu;
+    }
+    public void setColidiu(Boolean colidiu) {
+      this.colidiu = colidiu;
     }
 
 
