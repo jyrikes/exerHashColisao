@@ -1,3 +1,11 @@
+/**
+
+*Classe que representa uma célula da tabela hash com *tratamento de colisão por porão.
+*Cada célula contém um valor inteiro, uma flag *indicando se está presente na tabela,
+*uma flag indicando se houve colisão e a posição da *célula que gerou a colisão (caso exista).
+*/
+
+
 package hashColisao;
 
 public class Celula {
